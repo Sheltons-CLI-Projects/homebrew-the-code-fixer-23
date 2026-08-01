@@ -14,22 +14,22 @@ cask "mace" do
   on_macos do
     on_intel do
       url "https://github.com/louiss0/mace/releases/download/v#{version}/mace_#{version}_darwin_amd64.tar.gz"
-      sha256 "cd72afbe7a73f612680d518d1ee6c123a8e0a50e35215116cff42fc600452dc9"
+      sha256 "003eade7c470aacb20eb8af5c11e55057d0e96a754e50d57b43c0df17a8efc76"
     end
     on_arm do
       url "https://github.com/louiss0/mace/releases/download/v#{version}/mace_#{version}_darwin_arm64.tar.gz"
-      sha256 "6ba9a5e8048a88a45d43d41f6aaedd58086aac9c09da34b64247ec52e30b9c48"
+      sha256 "0aba7aa436c0e188367dfa397ead3a6497d2f0c4ff141bf33c4343a7a8800bcb"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/louiss0/mace/releases/download/v#{version}/mace_#{version}_linux_amd64.tar.gz"
-      sha256 "dfccccf3a5c0dff243ec5431b30a1f1e2ba40f95b4bac59149c6f4b36cded864"
+      sha256 "16c6d87b7d119797a13093860388381cd9d56fdb3dabfa821dc34691bb6e1810"
     end
     on_arm do
       url "https://github.com/louiss0/mace/releases/download/v#{version}/mace_#{version}_linux_arm64.tar.gz"
-      sha256 "f930fc8b1c2ded412bd6f2e3d4fda8807b2fabb96a6fe3efecaa131f9c56417a"
+      sha256 "1d0a808fbf81639355ef3adaf783dc7179033a1fce4e771d4af2faf55e839b52"
     end
   end
 
