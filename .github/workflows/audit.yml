@@ -8,7 +8,7 @@ on:
 
 jobs:
   style-check:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
 
@@ -25,5 +25,5 @@ jobs:
           for cask in Casks/*.rb; do
             token="${cask##*/}"
             token="${token%.rb}"
-            brew audit --cask --strict --online "$token"
+            brew audit --cask --strict --online --os=macos --arch=arm "$token"
           done
