@@ -3,29 +3,28 @@ cask "javascript-package-delegator" do
   version "5.0.0"
 
   on_macos do
-    on_intel do
-      sha256 "6abe59d633ada53a07666cff923f177dd3102e3b57e4db9afc721823b9d0443d"
-      url "https://github.com/louiss0/javascript-package-delegator/releases/download/v#{version}/javascript-package-delegator_#{version}_darwin_amd64.tar.gz"
-    end
     on_arm do
       sha256 "955e4119faca9b5b4b217b271159bc1ff19144e0ee1dcb9365486de923a6b33a"
       url "https://github.com/louiss0/javascript-package-delegator/releases/download/v#{version}/javascript-package-delegator_#{version}_darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "5b9878e872c503209713b89b92416e85a1af1243251336a3f080d93e637f6337"
-      url "https://github.com/louiss0/javascript-package-delegator/releases/download/v#{version}/javascript-package-delegator_#{version}_linux_amd64.tar.gz"
+      sha256 "6abe59d633ada53a07666cff923f177dd3102e3b57e4db9afc721823b9d0443d"
+      url "https://github.com/louiss0/javascript-package-delegator/releases/download/v#{version}/javascript-package-delegator_#{version}_darwin_amd64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "34c47804ea356dee1a77265707109d32f86314431b06827e8549070e103572f8"
       url "https://github.com/louiss0/javascript-package-delegator/releases/download/v#{version}/javascript-package-delegator_#{version}_linux_arm64.tar.gz"
     end
+    on_intel do
+      sha256 "5b9878e872c503209713b89b92416e85a1af1243251336a3f080d93e637f6337"
+      url "https://github.com/louiss0/javascript-package-delegator/releases/download/v#{version}/javascript-package-delegator_#{version}_linux_amd64.tar.gz"
+    end
   end
 
   name "javascript-package-delegator"
-  desc "A CLI for executing JavaScript package manager commands based on lock files. Supports npm, yarn, pnpm, bun, and deno."
+  desc "Execute JavaScript package manager commands from lock files"
   homepage "https://github.com/louiss0/javascript-package-delegator"
 
   livecheck do
@@ -34,6 +33,5 @@ cask "javascript-package-delegator" do
 
   binary "jpd"
 
-  # No zap stanza required
-
+  zap :not_required
 end

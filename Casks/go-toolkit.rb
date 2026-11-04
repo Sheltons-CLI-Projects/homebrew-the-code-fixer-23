@@ -3,29 +3,28 @@ cask "go-toolkit" do
   version "1.0.0"
 
   on_macos do
-    on_intel do
-      sha256 "0c5e46c68145071c7b69be318da1da70d0bc4ec782da520036d33cd3c0cd6378"
-      url "https://github.com/louiss0/go-toolkit/releases/download/v#{version}/go-toolkit_#{version}_darwin_amd64.tar.gz"
-    end
     on_arm do
       sha256 "4785e1756f2112fe65111b46453b7aea01efa5d5104c63acd1227091efa9854a"
       url "https://github.com/louiss0/go-toolkit/releases/download/v#{version}/go-toolkit_#{version}_darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "4b0c8a6e75880056c2e39132cd005c8057a4417beb5b0cb007606db7d1d58f7b"
-      url "https://github.com/louiss0/go-toolkit/releases/download/v#{version}/go-toolkit_#{version}_linux_amd64.tar.gz"
+      sha256 "0c5e46c68145071c7b69be318da1da70d0bc4ec782da520036d33cd3c0cd6378"
+      url "https://github.com/louiss0/go-toolkit/releases/download/v#{version}/go-toolkit_#{version}_darwin_amd64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "5e5ac0d6eb9cd2012841ff5e533b70067d42ba7d4bf07d399861ec38b8bcfdbe"
       url "https://github.com/louiss0/go-toolkit/releases/download/v#{version}/go-toolkit_#{version}_linux_arm64.tar.gz"
     end
+    on_intel do
+      sha256 "4b0c8a6e75880056c2e39132cd005c8057a4417beb5b0cb007606db7d1d58f7b"
+      url "https://github.com/louiss0/go-toolkit/releases/download/v#{version}/go-toolkit_#{version}_linux_amd64.tar.gz"
+    end
   end
 
   name "go-toolkit"
-  desc "CLI for Go scaffolding and dependency workflows."
+  desc "CLI for Go scaffolding and dependency workflows"
   homepage "https://github.com/louiss0/go-toolkit"
 
   livecheck do
@@ -34,6 +33,5 @@ cask "go-toolkit" do
 
   binary "gtk"
 
-  # No zap stanza required
-
+  zap :not_required
 end

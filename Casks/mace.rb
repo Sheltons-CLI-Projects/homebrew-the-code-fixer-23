@@ -3,29 +3,28 @@ cask "mace" do
   version "1.0.1"
 
   on_macos do
-    on_intel do
-      sha256 "972242caaeb12ac8a9424cb7899074b2687ba098ab30989290197514dfbf7500"
-      url "https://github.com/louiss0/mace/releases/download/v#{version}/mace_#{version}_darwin_amd64.tar.gz"
-    end
     on_arm do
       sha256 "eeedceb726977f47500fa34c46c3cac5328ca1e9f53a1c4a66ad22b3f5024c9c"
       url "https://github.com/louiss0/mace/releases/download/v#{version}/mace_#{version}_darwin_arm64.tar.gz"
     end
-  end
-
-  on_linux do
     on_intel do
-      sha256 "87fba92a03c58bf6353438c8fe6a0c8c66e627550ede375849df010cc3862492"
-      url "https://github.com/louiss0/mace/releases/download/v#{version}/mace_#{version}_linux_amd64.tar.gz"
+      sha256 "972242caaeb12ac8a9424cb7899074b2687ba098ab30989290197514dfbf7500"
+      url "https://github.com/louiss0/mace/releases/download/v#{version}/mace_#{version}_darwin_amd64.tar.gz"
     end
+  end
+  on_linux do
     on_arm do
       sha256 "ddaccb41b43d429c59a58091e2f88509f8cf6578d2e325650c8e6d04df14bf11"
       url "https://github.com/louiss0/mace/releases/download/v#{version}/mace_#{version}_linux_arm64.tar.gz"
     end
+    on_intel do
+      sha256 "87fba92a03c58bf6353438c8fe6a0c8c66e627550ede375849df010cc3862492"
+      url "https://github.com/louiss0/mace/releases/download/v#{version}/mace_#{version}_linux_amd64.tar.gz"
+    end
   end
 
   name "mace"
-  desc "Deterministic typed configuration language and Go toolkit."
+  desc "Deterministic typed configuration language and Go toolkit"
   homepage "https://github.com/louiss0/mace"
 
   livecheck do
@@ -34,6 +33,5 @@ cask "mace" do
 
   binary "mace"
 
-  # No zap stanza required
-
+  zap :not_required
 end
