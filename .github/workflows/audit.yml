@@ -25,5 +25,5 @@ jobs:
           for cask in Casks/*.rb; do
             token="${cask##*/}"
             token="${token%.rb}"
-            brew audit --cask --strict --online "$token"
+            brew audit --cask --strict --online --os=macos --arch=arm64 "$token"
           done
