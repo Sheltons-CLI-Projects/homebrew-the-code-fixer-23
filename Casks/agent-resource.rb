@@ -19,6 +19,8 @@ cask "agent-resource" do
 
   binary "agent_resource"
 
+  zap :not_required
+
   caveats do
     <<~EOS
       agent_resource is not currently signed or notarized. If macOS blocks the
@@ -26,6 +28,4 @@ cask "agent-resource" do
         xattr -dr com.apple.quarantine $(brew --prefix)/Caskroom/agent-resource/0.1.0/agent_resource
     EOS
   end
-
-  zap :not_required
 end
